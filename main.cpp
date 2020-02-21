@@ -35,7 +35,7 @@ public:
   CDnsSeedOpts() : nThreads(96), nDnsThreads(4), nPort(53), mbox(NULL), ns(NULL), host(NULL), tor(NULL), fUseTestNet(false), fWipeBan(false), fWipeIgnore(false), ipv4_proxy(NULL), ipv6_proxy(NULL) {}
 
   void ParseCommandLine(int argc, char **argv) {
-    static const char *help = "ritocoin-seeder\n"
+    static const char *help = "foxdcoin-seeder\n"
                               "Usage: %s -h <host> -n <ns> [-m <mbox>] [-t <threads>] [-p <port>]\n"
                               "\n"
                               "Options:\n"
@@ -398,13 +398,13 @@ extern "C" void* ThreadStats(void*) {
 }
 
 
-static const string mainnet_seeds[] = {"s1.ritocoin.org", "s2.ritocoin.org", "s3.ritocoin.org", "155.94.164.5", "37.145.84.173", "158.69.59.60", "113.229.15.175", "185.28.103.13", "78.36.193.51", "51.75.66.222", ""};
-static const string testnet_seeds[] = {"tn.s1.ritocoin.org", "tn.s2.ritocoin.org", "tn.s3.ritocoin.org", ""};
+static const string mainnet_seeds[] = {"seed1.foxrtb.com", "seed2.foxrtb.com", ""};
+static const string testnet_seeds[] = {"tn.s1.foxrtb.com", "tn.s2.foxrtb.com", "tn.s3.foxrtb.com", ""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 7342), true);
+    db.Add(CService("kjy2eqzk4zwi5zd3.onion", 8769), true);
   }
   do {
     for (int i=0; seeds[i] != ""; i++) {

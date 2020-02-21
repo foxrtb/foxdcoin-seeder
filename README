@@ -1,7 +1,7 @@
-ritocoin-seeder
+foxdcoin-seeder
 ==============
 
-Ritocoin-seeder is a crawler for the Ritocoin network, which exposes a list
+foxdcoin-seeder is a crawler for the foxdcoin network, which exposes a list
 of reliable nodes via a built-in DNS server.
 
 Features:
